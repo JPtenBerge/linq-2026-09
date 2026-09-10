@@ -46,6 +46,59 @@
   - indexer: `lijstje[4]`
   - `IndexOf()`
 
+## Pre-LINQ
+
+- `var` is gewoon fijn want `IEnumerable<CustomerEntity>`
+- extension methods
+  - LINQ doet alles extenden op `IEnumerable<T>`
+- anonieme objecten/tuples om je query mee te customizen
+- gedrag handmatig itereren en loopen en filteren
+
+
+## LINQ
+
+### Comprehension/query syntax
+
+Wanneer? Voor mij:
+
+- Leesbaarheid
+- Zodra het complex wordt: groupby/handmatige joins
+
+```cs
+var expensiveProducts = from p
+                        in products
+                        where p.Price > 50
+                        select p;
+```
+
+### Extension methods
+
+```cs
+products.Where(x => x.Price > 50)
+```
+
+Methoden:
+
+- Select   map van A naar B
+  ```js
+  [1,2,3].map(x => x * 10)
+  ```
+- SelectMany  flatMap
+- Where
+- First/FirstOrDefault
+- Single/SingleOrDefault
+- Last/LastOrDefault
+- Any
+- All
+- ToList/ToArray
+- Aggregate
+- GroupBy
+- Join
+- OrderBy
+- Take
+- Skip
+- Count/Sum/Average
+
 ## Coole links
 
 - [source.dot.net](https://source.dot.net)
