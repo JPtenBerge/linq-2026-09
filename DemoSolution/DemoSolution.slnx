@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="CollectionDemo/CollectionDemo.csproj" />
+  <Project Path="DemoLambdas/DemoLambdas.csproj" />
+  <Project Path="LambdaLab/LambdaLab.csproj" />
+</Solution>
